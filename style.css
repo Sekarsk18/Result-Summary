@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", serif;
+}
+
+:root {
+  --Lightred: hsl(0, 100%, 67%);
+  --Orangeyyellow: hsl(39, 100%, 56%);
+  --Greenteal: hsl(166, 100%, 37%);
+  --Cobaltblue: hsl(234, 85%, 45%);
+
+  /* ## Gradients */
+
+  --Lightslateblue: hsl(252, 100%, 67%);
+  --Lightroyalblue: hsl(241, 81%, 54%);
+
+  --Violetblue: hsla(256, 72%, 46%, 1);
+  --Persianblue: hsla(241, 72%, 46%, 0);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 540px;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.171);
+  transition: all 0.5s ease-in-out;
+}
+
+.result-card {
+  background: linear-gradient(
+    to top,
+    var(--Lightroyalblue) 30%,
+    var(--Lightslateblue)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 2.9rem;
+  color: white;
+  border-radius: 15px;
+}
+
+.result-card .title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.781);
+}
+
+.result-card .points-circle {
+  width: 140px;
+  height: 140px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom, var(--Violetblue), var(--Persianblue));
+}
+
+.points-circle .point {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.result-card .credits {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-block: 1rem;
+}
+
+.result-card .points-desc {
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Summary Style */
+
+.result-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.8rem; 
+}
+
+.result-summary h4 {
+  font-size: 1.2rem;
+  color: #303b59;
+}
+
+.result-summary .btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.result-summary .btn-group button {
+  width: 200px;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.result-summary button .icon-title {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.result-summary .btn-group span {
+  font-weight: bold;
+}
+
+.result-summary .title-points b {
+    color:#303b59;
+    font-weight: 900;
+    margin-right: 0.2rem;
+}
+
+.result-summary .title-points {
+    color: rgba(112, 112, 112, 0.596);
+    font-weight: 700;
+}
+
+.result-summary .reaction-btn {
+  color: var(--Lightred);
+  background-color: hsl(0, 10%, 96%);
+}
+
+.result-summary .memory-btn {
+  color: var(--Orangeyyellow);
+  background-color: hsl(38, 73%, 97%);
+}
+
+.result-summary .verbal-btn {
+  color: var(--Greenteal);
+  background-color: hsl(164, 65%, 97%);
+}
+
+.result-summary .visual-btn {
+  color: var(--Cobaltblue);
+  background-color: hsl(235, 100%, 98%);
+}
+
+.result-summary .submit {
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background: #303b59;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.5s ease;
+}
+
+.result-summary .submit:hover {
+     background: linear-gradient(
+    to top,
+    var(--Lightroyalblue),
+    var(--Lightslateblue)
+  ); 
+}
+
+
+@media only screen and (max-width: 550px){
+    .wrapper {
+        flex-direction: column;
+        border-radius: 0;
+        height: 100%;
+    }
+    .result-card {
+        border-radius: 0 0 40px 40px;
+        padding: 2rem 3.5rem;
+    }
+
+    .result-card .title {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: rgba(255, 255, 255, 0.781);
+    }
+
+    .result-card .points-desc {
+       text-align: center;
+        font-size: .95rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .result-summary {
+        padding: 1rem;
+    }
+
+    .result-summary .header{
+        margin-bottom: 1rem;
+    }
+
+    .result-summary .btn-group {
+      gap: 1rem;
+    }
+
+    .result-summary .btn-group button {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .result-summary .submit {
+      margin-top: 1rem;
+      margin-left: 1rem;
+      width: 90%;
+      padding: 1rem;
+    }
+}
